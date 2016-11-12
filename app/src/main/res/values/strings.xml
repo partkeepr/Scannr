@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Partkeepr Scannr</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_user">User</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_server">Server</string>
+
+    <string name="action_login">Login</string>
+    <string name="app_header">PARTKEEPR SCANNR</string>
+    <string name="app_footer">Developed by \n Marcus Drobisch</string>
+    <string name="error_invalid_user">This user is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="action_settings">Settings</string>
+    <string name="settings_activity_title">Partkeepr App - Settings</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="pref_name">PartkeeprPrefs</string>
+    <string name="pref_key_server">serverPref</string>
+    <string name="pref_default_server">https://demo.partkeepr.org</string>
+    <string name="pref_key_user">userPref</string>
+    <string name="pref_default_user">admin</string>
+    <string name="pref_key_password">passwordPref</string>
+    <string name="pref_default_password"></string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c1047e40ecf7e01d98b036195b7284d57accb717">
+        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_5c7b90da89f11f24b72d2ced5d3284e3b03a6cff\classes.dex" />
+    </item>
+
+</items>
