@@ -5,7 +5,8 @@
     <string name="prompt_user">User</string>
     <string name="prompt_password">Password</string>
     <string name="prompt_server">Server</string>
-
+    <string name="action_copy_staktrace">Copy</string>
+    <string name="action_mail_staktrace">Mail</string>
     <string name="action_login">Login</string>
     <string name="app_header">PARTKEEPR SCANNR</string>
     <string name="app_footer">Developed by \n Marcus Drobisch</string>

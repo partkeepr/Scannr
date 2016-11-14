@@ -50,7 +50,7 @@ public class ContinuousCaptureActivity extends Activity {
         @Override
         public void barcodeResult(BarcodeResult result) {
             if (result.getText() != null) {
-                if(Objects.equals(actualCode, result.getText()))
+                if(actualCode.equals(result.getText()))
                 {
                     actualCode = result.getText();
                 } else {

@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
      * Keep track of the login task to ensure we can cancel it if requested.
      */
     private UserLoginTask mAuthTask = null;
-
+    protected PartkeeprScannrApplication app;
     // UI references.
     private AutoCompleteTextView mUserView;
     private EditText mPasswordView;
@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        app = (PartkeeprScannrApplication)getApplication();
         // Set up the login form.
         mUserView = (AutoCompleteTextView) findViewById(R.id.user);
         populateAutoComplete();
@@ -159,6 +161,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
     }
 
     private void changeSettings() {
+
         Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
         startActivity(intent);
 

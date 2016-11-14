@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.drobisch.partkeeprapp"
+        applicationId "com.drobisch.partkeeprscannrapp"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
@@ -22,10 +22,10 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:appcompat-v7:23.+'
+    compile 'com.android.support:design:23.+'
 
-    compile 'com.journeyapps:zxing-android-embedded:3.3.0'
+    compile 'com.journeyapps:zxing-android-embedded:3.4.0'
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
 
