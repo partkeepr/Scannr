@@ -35,7 +35,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.Manifest.permission.READ_CONTACTS;
+import static android.Manifest.permission.CAMERA;
 
 /**
  * A login screen that offers login via email/password.
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
     /**
      * Id to identity READ_CONTACTS permission request.
      */
-    private static final int REQUEST_READ_CONTACTS = 0;
+    private static final int REQUEST_CAMERA = 0;
 
     /**
      * A dummy authentication store containing known user names and passwords.
@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
         app = (PartkeeprScannrApplication)getApplication();
         // Set up the login form.
         mUserView = (AutoCompleteTextView) findViewById(R.id.user);
-        populateAutoComplete();
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -117,32 +116,24 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
 
     }
 
-    private void populateAutoComplete() {
-        if (!mayRequestContacts()) {
-            return;
-        }
-
-        getLoaderManager().initLoader(0, null, this);
-    }
-
     private boolean mayRequestContacts() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             return true;
         }
-        if (checkSelfPermission(READ_CONTACTS) == PackageManager.PERMISSION_GRANTED) {
+        if (checkSelfPermission(CAMERA) == PackageManager.PERMISSION_GRANTED) {
             return true;
         }
-        if (shouldShowRequestPermissionRationale(READ_CONTACTS)) {
-            Snackbar.make(mUserView, R.string.permission_rationale, Snackbar.LENGTH_INDEFINITE)
+        if (shouldShowRequestPermissionRationale(CAMERA)) {
+            Snackbar.make(findViewById(android.R.id.content), R.string.permission_rationale, Snackbar.LENGTH_INDEFINITE)
                     .setAction(android.R.string.ok, new View.OnClickListener() {
                         @Override
                         @TargetApi(Build.VERSION_CODES.M)
                         public void onClick(View v) {
-                            requestPermissions(new String[]{READ_CONTACTS}, REQUEST_READ_CONTACTS);
+                            requestPermissions(new String[]{CAMERA}, REQUEST_CAMERA);
                         }
                     });
         } else {
-            requestPermissions(new String[]{READ_CONTACTS}, REQUEST_READ_CONTACTS);
+            requestPermissions(new String[]{CAMERA}, REQUEST_CAMERA);
         }
         return false;
     }
@@ -153,9 +144,9 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
-        if (requestCode == REQUEST_READ_CONTACTS) {
+        if (requestCode == REQUEST_CAMERA) {
             if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                populateAutoComplete();
+                doLogin();
             }
         }
     }
@@ -167,16 +158,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
 
     }
 
-    /**
-     * Attempts to sign in or register the account specified by the login form.
-     * If there are form errors (invalid email, missing fields, etc.), the
-     * errors are presented and no actual login attempt is made.
-     */
-    private void attemptLogin() {
-        if (mAuthTask != null) {
-            return;
-        }
-
+    private void doLogin() {
         // Reset errors.
         mUserView.setError(null);
         mPasswordView.setError(null);
@@ -217,6 +199,24 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
         }
+    }
+
+    /**
+     * Attempts to sign in or register the account specified by the login form.
+     * If there are form errors (invalid email, missing fields, etc.), the
+     * errors are presented and no actual login attempt is made.
+     */
+    private void attemptLogin() {
+        if (mAuthTask != null) {
+            return;
+        }
+
+        if (!mayRequestContacts()) {
+            return;
+        } else {
+            doLogin();
+        }
+
     }
 
     private boolean isEmailValid(String email) {
