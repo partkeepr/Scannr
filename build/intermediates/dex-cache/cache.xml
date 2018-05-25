@@ -2,102 +2,102 @@
 <items version="2" >
 
     <item
-        jar="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_f1a01ed598e8cceaac0b9e91aa74d7bc48ad2ccf.jar" />
-    </item>
-    <item
-        jar="E:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_e418e7189f88f8ca2dfc1a12eb3076c5608e9ab8.jar" />
-    </item>
-    <item
-        jar="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_5c525e6a43fd9d7cb33a9ca90fede049585d8961.jar" />
-    </item>
-    <item
-        jar="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.4.0_46179b8972101db8a3aa25e298422ac1d5ec1fcf.jar" />
-    </item>
-    <item
-        jar="C:\Users\drobisch\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.2.1\2287494d4f5f9f3a9a2bb6980e3f32053721b315\core-3.2.1.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\core-3.2.1_ef7b3557e04d992b0bf0b6cc0a406732b073ca4d.jar" />
-    </item>
-    <item
-        jar="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_09e86570126c05c34510a0e15fb19c9821149572.jar" />
-    </item>
-    <item
-        jar="C:\Users\drobisch\.gradle\caches\modules-2\files-2.1\com.squareup.leakcanary\leakcanary-watcher\1.3.1\6904771474c058abfc5912c13d12b02754712165\leakcanary-watcher-1.3.1.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="6904771474c058abfc5912c13d12b02754712165">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\leakcanary-watcher-1.3.1_862e94f2137beed16550b4e9f8761f6fdb581ed9.jar" />
-    </item>
-    <item
-        jar="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.3.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="9066b6d4e2536b49e3b58aa301fd925247032df0">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\com.squareup.leakcanary-leakcanary-android-1.3.1_10fcf356bd4b4449bf698899c631cdfd41e6cd09.jar" />
-    </item>
-    <item
-        jar="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\3.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="0e1f104cf60bfe34147ef670229f2635789c79a4">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\com.journeyapps-zxing-android-embedded-3.4.0_3d8b479ea0d32a797f981a6bd11e0d95699dd588.jar" />
-    </item>
-    <item
-        jar="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.4.0_2762f6a3b008b5378f273f401222fc8e6cdb2b2b.jar" />
-    </item>
-    <item
-        jar="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_d747a5610344923baf73c70dafb0c4bd5f5b059e.jar" />
-    </item>
-    <item
-        jar="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_07f6c9c14be8219de510425c301503f47e37bb4f.jar" />
-    </item>
-    <item
-        jar="C:\Users\drobisch\.gradle\caches\modules-2\files-2.1\com.squareup.leakcanary\leakcanary-analyzer\1.3.1\325e7401a7ea16918eb39ba8baad8fd5561a55d3\leakcanary-analyzer-1.3.1.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="325e7401a7ea16918eb39ba8baad8fd5561a55d3">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\leakcanary-analyzer-1.3.1_77f79ba823d7444edfe15414731766aa68a05547.jar" />
-    </item>
-    <item
-        jar="C:\Users\drobisch\.gradle\caches\modules-2\files-2.1\com.squareup.haha\haha\1.3\d2c832f9d14a11c79f58a7ee2e10526a12152c72\haha-1.3.jar"
+        jar="/Users/jelle/.gradle/caches/modules-2/files-2.1/com.squareup.haha/haha/1.3/d2c832f9d14a11c79f58a7ee2e10526a12152c72/haha-1.3.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="d2c832f9d14a11c79f58a7ee2e10526a12152c72">
-        <dex dex="E:\Workspaces\AndroidDev\PartkeeprScannrApp\app\build\intermediates\pre-dexed\debug\haha-1.3_b0d56f4a30c5579c294eeb446dce1d85585da539.jar" />
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/haha-1.3_15132b598dcd003a2503c83596cb278bad866e35.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-watcher/1.3.1/6904771474c058abfc5912c13d12b02754712165/leakcanary-watcher-1.3.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6904771474c058abfc5912c13d12b02754712165">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/leakcanary-watcher-1.3.1_954621641f5891cfce7e78ec9387916415843feb.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/projecten/Scannr/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_3fd5cb32d0d9377acb81cd18c8fdaee710efdca7.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/projecten/Scannr/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_3dfe1d9477f3d5511f9e59fcf09dfc7c4f1e183c.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_1bce6c535930dc85a111d86d46f1d9c1b5031ae1.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/projecten/Scannr/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_10f06731a8567586ebc4a42ef016699b07ea6908.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/projecten/Scannr/app/build/intermediates/exploded-aar/com.journeyapps/zxing-android-embedded/3.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="0e1f104cf60bfe34147ef670229f2635789c79a4">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/com.journeyapps-zxing-android-embedded-3.4.0_7e3ced531095663e5dabaea9f2c1dc02e04a437e.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/projecten/Scannr/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.3.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="9066b6d4e2536b49e3b58aa301fd925247032df0">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/com.squareup.leakcanary-leakcanary-android-1.3.1_4e9232b9306c9cbb08dc217e1238edb44d46b3b3.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/projecten/Scannr/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_e361ca5d6861cd9b08b33180ab21a0ed6850e810.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-analyzer/1.3.1/325e7401a7ea16918eb39ba8baad8fd5561a55d3/leakcanary-analyzer-1.3.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="325e7401a7ea16918eb39ba8baad8fd5561a55d3">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/leakcanary-analyzer-1.3.1_b9ada5a20e835e1ce9c4177a2785cf2aba3fcd26.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/core-3.2.1_640c2a3005fb0030108944e694637041a07c90c5.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/projecten/Scannr/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_cfdfd94a29645c3e05c849c414667d0a19a6d658.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/projecten/Scannr/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_a6e3648b5a09464388031e837baa0c707f21431d.jar" />
+    </item>
+    <item
+        jar="/Users/jelle/projecten/Scannr/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/jelle/projecten/Scannr/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_c61119c34a6498a074ac9393df5b628609bddd62.jar" />
     </item>
 
 </items>
