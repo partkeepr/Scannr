@@ -20,6 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.*;
+import java.math.BigInteger;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -39,7 +40,7 @@ public class ContinuousCaptureActivity extends Activity {
     private String mUser;
     private String mPassword;
     private String mServer;
-    private Integer mPartPartID = -1;
+    private String mPartPartID = "-1";
     private TextView mPartNameView;
     private TextView mPartStockView;
     private TextView mPartLocationView;
@@ -66,7 +67,8 @@ public class ContinuousCaptureActivity extends Activity {
                 //specify the toast display position exact parent layout center. no x or y offset
                 infoToast.setGravity(Gravity.BOTTOM,0,390);
                 infoToast.show();
-                updatePartInfo(Integer.parseInt(actualCode));
+                Log.d("barcodeResult", actualCode);
+                updatePartInfo(actualCode);
                 isNewTag = false;
             }
         }
@@ -99,7 +101,7 @@ public class ContinuousCaptureActivity extends Activity {
         mPartNameView.setText("");
         mPartLocationView.setText("");
         mPartStockView.setText("0");
-        mPartPartID = -1;
+        mPartPartID = "-1";
 
         ImageButton mAddStockButton = (ImageButton) findViewById(R.id.addStock_button);
         mAddStockButton.setOnClickListener(new View.OnClickListener() {
@@ -122,14 +124,14 @@ public class ContinuousCaptureActivity extends Activity {
         barcodeView.decodeContinuous(callback);
     }
 
-    private void updatePartInfo(int partID) {
+    private void updatePartInfo(String partID) {
         ApiPartTask task = new ApiPartTask(mUser,mPassword,mServer,partID,"","");
         task.execute((Void) null);
     }
 
     private void addStock() {
         Log.d("CaptureActivity", "addStock");
-        if(mPartPartID != -1) {
+        if(mPartPartID != "-1") {
             ApiPartTask task = new ApiPartTask(mUser, mPassword, mServer, mPartPartID,"addStock", "quantity=1&price=0&comment=");
             task.execute((Void) null);
         }
@@ -137,7 +139,7 @@ public class ContinuousCaptureActivity extends Activity {
 
     private void removeStock() {
         Log.d("CaptureActivity", "removeStock");
-        if(mPartPartID != -1) {
+        if(mPartPartID != "-1") {
             ApiPartTask task = new ApiPartTask(mUser, mPassword, mServer, mPartPartID,"addStock", "quantity=-1&price=0&comment=");
             task.execute((Void) null);
         }
@@ -269,11 +271,11 @@ public class ContinuousCaptureActivity extends Activity {
         private String mPartName = "";
         private Integer mPartStock = 0;
         private String mPartLocation = "";
-        private Integer mPartID;
+        private String mPartID;
         private Boolean error = false;
         private String errorString;
 
-        ApiPartTask(String user, String password, String server, int partID, String command, String json) {
+        ApiPartTask(String user, String password, String server, String partID, String command, String json) {
             mUser = user;
             mPassword = password;
             mServer = server;
@@ -315,6 +317,7 @@ public class ContinuousCaptureActivity extends Activity {
                 }
                 else
                 {
+                    Log.e("HTTPResponse", Integer.toString(httpcon.getResponseCode()));
                     if(httpcon != null) {
                         error = true;
                         errorString = "Connection failed with http-code " + httpcon.getResponseCode();
@@ -332,6 +335,7 @@ public class ContinuousCaptureActivity extends Activity {
             }
 
             try {
+                Log.d("JSONResult", "Hallo ik ben deze fout: " + jsonString);
                 JSONObject json= new JSONObject(jsonString);
                 mPartName = (String) json.get("name") + " (ID: " + mPartID.toString() + ")";
                 JSONObject jsonStorage = json.getJSONObject("storageLocation");
@@ -352,7 +356,7 @@ public class ContinuousCaptureActivity extends Activity {
             mPartStockView.setText(mPartStock.toString());
             mPartPartID = mPartID;
             if(error == true) {
-                mPartPartID = -1;
+                mPartPartID = "-1";
                 Toast infoToast = Toast.makeText(getApplicationContext(),errorString,Toast.LENGTH_SHORT);
                 //specify the toast display position exact parent layout center. no x or y offset
                 infoToast.setGravity(Gravity.BOTTOM,0,390);
