@@ -105,9 +105,10 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
 
-        SharedPreferences.Editor editor = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE).edit();
-        editor.clear();
-        editor.commit();
+        //The lines below clear the previously saved shared preferences
+        //SharedPreferences.Editor editor = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE).edit();
+        //editor.clear();
+        //editor.commit();
 
         SharedPreferences prefs = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE);
         String user = prefs.getString(getString(R.string.pref_key_user), getString(R.string.pref_default_user));
