@@ -1,10 +1,12 @@
 package com.drobisch.partkeeprscannrapp;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Message;
+import android.support.v7.app.AlertDialog;
 import android.util.Base64;
 import android.util.Log;
 import android.util.Pair;
@@ -273,6 +275,7 @@ public class ContinuousCaptureActivity extends Activity {
         private Boolean error = false;
         private String errorString;
 
+
         ApiPartTask(String user, String password, String server, int partID, String command, String json) {
             mUser = user;
             mPassword = password;
@@ -316,12 +319,26 @@ public class ContinuousCaptureActivity extends Activity {
                 else
                 {
                     if(httpcon != null) {
-                        error = true;
-                        errorString = "Connection failed with http-code " + httpcon.getResponseCode();
+
+                        switch (httpcon.getResponseCode())
+                        {
+                            case 401:
+                                error = true;
+                                errorString = getString(R.string.error_incorrect_password_user);
+                            break;
+                            case 404:
+                                error = true;
+                                errorString = getString(R.string.error_part_not_exists);
+                            break;
+                            default:
+                                error = true;
+                                errorString = getString(R.string.error_http_long);
+                            break;
+                        }
                     }
                     else {
                         error = true;
-                        errorString = "Connection failed";
+                        errorString = getString(R.string.error_connection_long);
                     }
                 }
             }
@@ -329,6 +346,7 @@ public class ContinuousCaptureActivity extends Activity {
             catch (IOException e1) {
                 e1.printStackTrace();
                 error = true;
+                errorString = getString(R.string.error_server_connect_failed);
             }
 
             try {
@@ -353,11 +371,7 @@ public class ContinuousCaptureActivity extends Activity {
             mPartPartID = mPartID;
             if(error == true) {
                 mPartPartID = -1;
-                Toast infoToast = Toast.makeText(getApplicationContext(),errorString,Toast.LENGTH_SHORT);
-                //specify the toast display position exact parent layout center. no x or y offset
-                infoToast.setGravity(Gravity.BOTTOM,0,390);
-                infoToast.show();
-
+                openMessageBox("Error", errorString);
             }
         }
 
@@ -365,5 +379,17 @@ public class ContinuousCaptureActivity extends Activity {
         protected void onCancelled() {
 
         }
+
+
+        protected void openMessageBox(String headline, String message)
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(ContinuousCaptureActivity.this);
+            builder.setMessage(message).setTitle(headline);
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {public void onClick(DialogInterface dialog, int id) {}});
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
+
+
     }
 }
