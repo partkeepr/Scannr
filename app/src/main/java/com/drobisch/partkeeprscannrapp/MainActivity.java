@@ -105,14 +105,13 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
 
-        SharedPreferences.Editor editor = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE).edit();
-        editor.clear();
-        editor.commit();
-
         SharedPreferences prefs = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE);
         String user = prefs.getString(getString(R.string.pref_key_user), getString(R.string.pref_default_user));
+        String user_pass = prefs.getString(getString(R.string.pref_key_password), getString(R.string.pref_default_user));
+
         mUserView.setText(user);
-        mPasswordView.setText("admin");
+        mPasswordView.setText(user_pass);
+
 
     }
 
@@ -193,7 +192,9 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
             // perform the user login attempt.
             SharedPreferences.Editor editor = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE).edit();
             editor.putString(getString(R.string.pref_key_user), mUserView.getText().toString());
+            editor.putString(getString(R.string.pref_key_password), mPasswordView.getText().toString());
             editor.commit();
+
 
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
