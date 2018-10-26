@@ -34,6 +34,7 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+
         SharedPreferences prefs = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE);
         String server = prefs.getString(getString(R.string.pref_key_server), getString(R.string.pref_default_server));
         mServerView.setText(server);
@@ -43,6 +44,7 @@ public class SettingsActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE).edit();
         editor.putString(getString(R.string.pref_key_server), mServerView.getText().toString());
         editor.commit();
+        finish();
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
