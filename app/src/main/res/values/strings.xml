@@ -26,6 +26,7 @@
     <string name="error_http">HTTP Error</string>
     <string name="error_http_long">Connection failed with http-code</string>
     <string name="error_server_connect_failed">Failed to connect to server</string>
+    <string name="error_unknown">A unknown error occurred</string>
 
 
 
