@@ -12,6 +12,7 @@ import java.io.Writer;
  */
 public class PartkeeprScannrApplication extends Application {
     public void onCreate () {
+        super.onCreate();
         // Setup handler for uncaught exceptions.
         Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
             @Override

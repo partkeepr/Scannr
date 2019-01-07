@@ -45,6 +45,7 @@ public class ContinuousCaptureActivity extends Activity {
     private TextView mPartNameView;
     private TextView mPartStockView;
     private TextView mPartLocationView;
+    private EditText mAVGPriceField;
 
 
 
@@ -97,6 +98,7 @@ public class ContinuousCaptureActivity extends Activity {
         mPartNameView = (TextView) findViewById(R.id.partName);
         mPartLocationView = (TextView) findViewById(R.id.partLocation);
         mPartStockView = (TextView) findViewById(R.id.partStock);
+        mAVGPriceField = (EditText) findViewById(R.id.avgPrice) ;
 
         mPartNameView.setText("");
         mPartLocationView.setText("");
@@ -122,6 +124,7 @@ public class ContinuousCaptureActivity extends Activity {
         barcodeView = (DecoratedBarcodeView) findViewById(R.id.barcode_scanner);
         barcodeView.setStatusText("");
         barcodeView.decodeContinuous(callback);
+
     }
 
     private void updatePartInfo(int partID) {
@@ -132,7 +135,7 @@ public class ContinuousCaptureActivity extends Activity {
     private void addStock() {
         Log.d("CaptureActivity", "addStock");
         if(mPartPartID != -1) {
-            ApiPartTask task = new ApiPartTask(mUser, mPassword, mServer, mPartPartID,"addStock", "quantity=1&price=0&comment=");
+            ApiPartTask task = new ApiPartTask(mUser, mPassword, mServer, mPartPartID,"addStock", "quantity=1&price=" + mAVGPriceField.getText().toString() + "&comment=");
             task.execute((Void) null);
         }
     }
@@ -272,6 +275,7 @@ public class ContinuousCaptureActivity extends Activity {
         private Integer mPartStock = 0;
         private String mPartLocation = "";
         private Integer mPartID;
+        private double mPartAvgPrice = 0;
         private Boolean error = false;
         private String errorString;
 
@@ -355,6 +359,7 @@ public class ContinuousCaptureActivity extends Activity {
                 JSONObject jsonStorage = json.getJSONObject("storageLocation");
                 mPartLocation = (String) jsonStorage.get("name");
                 mPartStock = json.getInt("stockLevel");
+                mPartAvgPrice = json.getDouble("averagePrice");
             } catch (JSONException e) {
                 e.printStackTrace();
                 error = true;
@@ -369,6 +374,7 @@ public class ContinuousCaptureActivity extends Activity {
             mPartLocationView.setText(mPartLocation);
             mPartStockView.setText(mPartStock.toString());
             mPartPartID = mPartID;
+            mAVGPriceField.setText(String.valueOf(Math.round(mPartAvgPrice *100.0) /100.0));
             if(error == true) {
                 mPartPartID = -1;
                 openMessageBox("Error", errorString);
