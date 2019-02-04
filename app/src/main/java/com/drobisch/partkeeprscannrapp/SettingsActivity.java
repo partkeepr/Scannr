@@ -42,7 +42,7 @@ public class SettingsActivity extends AppCompatActivity {
     public void saveSettings() {
         SharedPreferences.Editor editor = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE).edit();
         editor.putString(getString(R.string.pref_key_server), mServerView.getText().toString());
-        editor.commit();
+        editor.apply();
     }
 
     public boolean onOptionsItemSelected(MenuItem item){

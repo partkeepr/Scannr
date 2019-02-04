@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<C
 
         SharedPreferences.Editor editor = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE).edit();
         editor.clear();
-        editor.commit();
+        editor.apply();
 
         SharedPreferences prefs = getSharedPreferences(getString(R.string.pref_name), MODE_PRIVATE);
         String user = prefs.getString(getString(R.string.pref_key_user), getString(R.string.pref_default_user));
