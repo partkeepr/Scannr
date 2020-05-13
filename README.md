@@ -8,13 +8,14 @@ PartKeepr Scannr is an android app for Partkeepr with barcode support based on t
 
 ## Android support 
 
-The App ist build for android versions 4.1 (AP 16) to 6.0 (AP 23).
+The app supports Android version from 4.1 (API 16) to 10 (API 29).
 
 For now only tested with the following devices:
 
 - Samsung Galaxy S3 Mini, Android Jelly Bean, 4.2.2
 - Cubot H1, Android Lolly Pop, 5.1.1
 - Huawei P8 Lite, Android Marshmallow, 6.0.0
+- Nokia 6.1 Plus (Nokia X6), 10
 
 Please send me your model and android version, to get a meanigful list.
 
@@ -35,6 +36,6 @@ You can use any barcode generator providing the following formats.
 | EAN-8      | Code 128      | Aztec (beta)
 | EAN-13     | Codabar       | PDF 417 (beta)
 
-A good flexible barcode online generator is: http://www.barcode-generator.de/V2/de/index.jsp
+Good generators: [Barcode](http://www.barcode-generator.de/V2/de/index.jsp) or [QR Code](https://www.qr-code-generator.com)
 
 E.g. use Code-128 and put "375" (without quotations marks) to get a valid barcode tag from above.
